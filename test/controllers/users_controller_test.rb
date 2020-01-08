@@ -5,5 +5,4 @@ class UsersControllerTest < ActionDispatch::IntegrationTest
     get join_url
     assert_response :success
   end
-
 end
