@@ -11,7 +11,8 @@ class UsersController < ApplicationController
     @user = User.new(user_params)
 
     if @user.save
-      # do something...
+      flash[:success] = "WELCOME TO THE AUTH SERVER"
+      redirect_to @user
     else
       render :new
     end
