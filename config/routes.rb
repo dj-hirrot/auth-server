@@ -4,6 +4,9 @@ Rails.application.routes.draw do
   get '/about', to: 'static_pages#about'
   get '/contact', to: 'static_pages#contact'
   get '/join', to: 'users#new'
+  post '/join', to: 'users#create'
+
+  resources :users
 
   mount Tus::Server => "/files"
 end
