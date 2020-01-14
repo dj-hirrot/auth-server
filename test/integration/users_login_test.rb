@@ -41,9 +41,33 @@ class UsersLoginTest < ActionDispatch::IntegrationTest
     delete logout_path
     assert_not is_loggedin?
     assert_redirected_to root_url
+
+    # when user opening 2 or more browser
+    delete logout_path
+
     follow_redirect!
     assert_select 'a[href=?]', login_path
     assert_select 'a[href=?]', logout_path, count: 0
     assert_select 'a[href=?]', user_path(@user), count: 0
   end
+
+  test 'authenticated? should return false for a user with nil digest' do
+    assert_not @user.authenticated?('')
+  end
+
+  test 'login with remembering' do
+    login_as(@user, remember_me: '1')
+    assert_equal assigns(:user).remember_token, cookies['remember_token']
+    assert_not_empty cookies['remember_token']
+  end
+
+  test 'login without remembering' do
+    # login and save cookies
+    login_as(@user, remember_me: '1')
+    delete logout_path
+    # login after deleted cookies
+    login_as(@user, remember_me: '0')
+    assert_empty cookies['remember_token']
+  end
 end
+
