@@ -47,3 +47,4 @@ class UsersLoginTest < ActionDispatch::IntegrationTest
     assert_select 'a[href=?]', user_path(@user), count: 0
   end
 end
+
