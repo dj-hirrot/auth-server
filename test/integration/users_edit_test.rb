@@ -40,8 +40,8 @@ class UsersEditTest < ActionDispatch::IntegrationTest
 
     assert_not flash.empty?
     assert_redirected_to @user
-    @user.reload!
+    @user.reload
     assert_equal name, @user.name
-    assert_equal email @user.email
+    assert_equal email, @user.email
   end
 end
