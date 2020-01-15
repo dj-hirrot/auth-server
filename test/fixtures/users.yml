@@ -3,8 +3,8 @@ dj-hirrot:
   email: dj-hirrot@auth.app
   password_digest: <%= User.digest('password') %>
 
-dj-naoki:
-  name: dj-naoki
-  email: dj-naoki@auth.app
+dj-yuta:
+  name: dj-yuta
+  email: dj-yuta@auth.app
   password_digest: <%= User.digest('password') %>
 
