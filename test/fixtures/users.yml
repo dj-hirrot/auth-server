@@ -19,8 +19,8 @@ dj-koji:
   password_digest: <%= User.digest('password') %>
 
 <% 30.times do |n| %>
-  user_<%= n+1 %>:
-    name: <%= "User #{n+1}" %>
-    email: <%= "user-#{n+1}@example.com" %>
-    password_digest: <%= User.digest('password') %>
+user_<%= n+1 %>:
+  name: <%= "User #{n+1}" %>
+  email: <%= "user-#{n+1}@example.com" %>
+  password_digest: <%= User.digest('password') %>
 <% end %>
