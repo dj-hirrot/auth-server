@@ -2,4 +2,26 @@ dj-hirrot:
   name: dj-hirrot
   email: dj-hirrot@auth.app
   password_digest: <%= User.digest('password') %>
+  admin: true
 
+dj-yuta:
+  name: dj-yuta
+  email: dj-yuta@auth.app
+  password_digest: <%= User.digest('password') %>
+
+dj-hiroshi:
+  name: dj-hiroshi
+  email: dj-hiroshi@auth.app
+  password_digest: <%= User.digest('password') %>
+
+dj-koji:
+  name: dj-koji
+  email: dj-koji@auth.app
+  password_digest: <%= User.digest('password') %>
+
+<% 30.times do |n| %>
+user_<%= n+1 %>:
+  name: <%= "User #{n+1}" %>
+  email: <%= "user-#{n+1}@example.com" %>
+  password_digest: <%= User.digest('password') %>
+<% end %>
