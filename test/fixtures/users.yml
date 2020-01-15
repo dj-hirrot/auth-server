@@ -2,6 +2,7 @@ dj-hirrot:
   name: dj-hirrot
   email: dj-hirrot@auth.app
   password_digest: <%= User.digest('password') %>
+  admin: true
 
 dj-yuta:
   name: dj-yuta
