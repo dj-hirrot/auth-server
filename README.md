@@ -4,6 +4,6 @@
 - [x] gem install bcrypt
 - [x] add password_digest to users
 - [x] Authentication
-- [ ] Edit users and check roles
-- [ ] Confirmation
+- [x] Edit users and check roles
+- [x] Confirmation
 - [ ] Enable to change password
