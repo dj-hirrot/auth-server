@@ -28,4 +28,14 @@ class UsersIndexTest < ActionDispatch::IntegrationTest
     get users_path
     assert_select 'a', text: 'delete', count: 0
   end
+
+  test 'should hide non-activated users' do
+    login_as(@admin)
+    get users_path
+    assert_select 'a[href=?]', user_path(@non_admin)
+    @non_admin.update_columns(activated: false)
+    get users_path
+    @non_admin.reload
+    assert_select 'a[href=?]', user_path(@non_admin), count: 0
+  end
 end
