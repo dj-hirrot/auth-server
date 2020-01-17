@@ -13,4 +13,5 @@ Rails.application.routes.draw do
   resources :account_activations, only: [:edit]
 
   mount Tus::Server => "/files"
+  mount LetterOpenerWeb::Engine, at: 'letter_opener' if Rails.env.development?
 end
