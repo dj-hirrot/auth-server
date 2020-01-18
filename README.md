@@ -6,4 +6,4 @@
 - [x] Authentication
 - [x] Edit users and check roles
 - [x] Confirmation
-- [ ] Enable to change password
+- [ ] Enable to change password (Work In Progress)
