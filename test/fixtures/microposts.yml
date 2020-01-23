@@ -17,3 +17,10 @@ most_recent:
   user: hiroto
   content: 'This is most recent post'
   created_at: <%= Time.zone.now %>
+
+<% 50.times do |n| %>
+dj_<%= n %>:
+  user: dj-hirrot
+  content: <%= Faker::Lorem.sentence(word_count: 5) %>
+  created_at: <%= 42.days.ago %>
+<% end %>
