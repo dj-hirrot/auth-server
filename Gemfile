@@ -29,6 +29,9 @@ gem 'faker'
 gem 'will_paginate'
 gem 'bootstrap-will_paginate'
 
+gem 'carrierwave', '1.2.2'
+gem 'mini_magick', '4.7.0'
+
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
 
