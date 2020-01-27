@@ -1,5 +1,8 @@
 <% if loggedin? %>
-  <%= render 'static_pages/authed_root' %>
+  <div class="row">
+    <%= render 'static_pages/authed_root' %>
+    <%= render 'shared/feed' %>
+  </div>
 <% else %>
   <%= render 'static_pages/unauthed_root' %>
 <% end %>
