@@ -21,7 +21,7 @@ class MicropostsInterfaceTest < ActionDispatch::IntegrationTest
     assert_select 'div#error_explanation'
     # Valid submit
     content = 'This micropost created for test!!!'
-    picture = fixture_file_upload('test/fixtures/test-1.png', 'image/png')
+    picture = fixture_file_upload('test/fixtures/files/test-1.png', 'image/png')
     assert_difference 'Micropost.count', 1 do
       post microposts_path, params: {
         micropost: {
