@@ -1,0 +1,26 @@
+hiroto:
+  user: hiroto
+  content: 'I am hiroto.'
+  created_at: <%= 10.minutes.ago %>
+
+naoki:
+  user: hiroto
+  content: 'I am naoki.'
+  created_at: <%= 3.years.ago %>
+
+shintaro:
+  user: hiroto
+  content: 'I am shintaro'
+  created_at: <%= 2.hours.ago %>
+
+most_recent:
+  user: hiroto
+  content: 'This is most recent post'
+  created_at: <%= Time.zone.now %>
+
+<% 50.times do |n| %>
+dj_<%= n %>:
+  user: dj-hirrot
+  content: <%= Faker::Lorem.sentence(word_count: 5) %>
+  created_at: <%= 42.days.ago %>
+<% end %>

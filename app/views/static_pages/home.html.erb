@@ -1,11 +1,9 @@
-<div class="center jumbotron">
-  <h1>Welcome to the AuthServer</h1>
-
-  <h2>
-    This is the home page for the <a href="https://railstutorial.jp/">Ruby on Rails Tutorial</a>
-    application.
-  </h2>
-
-  <%= link_to "Join now!!", join_path, class: "btn btn-lg btn-primary" %>
-</div>
+<% if loggedin? %>
+  <div class="row">
+    <%= render 'static_pages/authed_root' %>
+    <%= render 'shared/feed' %>
+  </div>
+<% else %>
+  <%= render 'static_pages/unauthed_root' %>
+<% end %>
 

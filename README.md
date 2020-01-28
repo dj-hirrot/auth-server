@@ -1,5 +1,4 @@
 # Auth server
-## Todos
 - [x] Create User Model
 - [x] Apply `has_secure_password`
 - [x] gem install bcrypt
@@ -7,4 +6,4 @@
 - [x] Authentication
 - [x] Edit users and check roles
 - [x] Confirmation
-- [ ] Enable to change password (Work In Progress)
+- [x] Enable to change password
